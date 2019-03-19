@@ -1,6 +1,8 @@
 # Builds & Scripts
 _build
 *.native
+*.install
+*.merlin
 *.pyc
 
 # Others
