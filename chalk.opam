@@ -8,6 +8,7 @@ dev-repo: "git+ssh://git@github.com/aexpl/chalk.git"
 build: [
   ["dune" "subst" "-n" name] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
+]
 depends: [
   "ocaml" {>= "4.03"}
   "dune" {build}
@@ -27,5 +28,5 @@ let some_string = "Hello world!"
 flags: light-uninstall
 # url {
 #   src: "https://github.com/aexpl/chalk/archive/v1.1.tar.gz"
-#   checksum: "md5=a4b2d788c3848449a9e9767bd0320748"
+#   checksum: "md5=<FILL>"
 # }
