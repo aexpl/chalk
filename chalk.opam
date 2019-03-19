@@ -1,12 +1,10 @@
 opam-version: "2.0"
-name: "chalk"
-version: "1.1"
 maintainer: "Nick Zuber <zuber.nicholas@gmail.com>"
-author: "Nick Zuber <zuber.nicholas@gmail.com>"
+authors: "Nick Zuber <zuber.nicholas@gmail.com>"
 homepage: "https://github.com/aexpl/chalk"
 bug-reports: "https://github.com/aexpl/chalk/issues"
 license: "MIT"
-dev-repo: "git@github.com:aexpl/chalk.git"
+dev-repo: "git+ssh://git@github.com/aexpl/chalk.git"
 build: [
   ["dune" "subst" "-n" name] {pinned}
   ["dune" "build" "-p" name "-j" jobs]
@@ -15,3 +13,19 @@ depends: [
   "dune" {build}
   "ocamlfind" {build}
 ]
+synopsis: "Composable and simple terminal highlighting package"
+description: """
+Composable and simple terminal highlighting package. Very simple API;
+and example usage could be as follows:
+
+```ocaml
+let some_string = "Hello world!"
+  |> Chalk.red
+  |> Chalk.bold
+  |> Chalk.underline
+```"""
+flags: light-uninstall
+# url {
+#   src: "https://github.com/aexpl/chalk/archive/v1.1.tar.gz"
+#   checksum: "md5=a4b2d788c3848449a9e9767bd0320748"
+# }
