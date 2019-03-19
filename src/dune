@@ -1,0 +1,4 @@
+(library
+  (name chalk)
+  (public_name chalk))
+
